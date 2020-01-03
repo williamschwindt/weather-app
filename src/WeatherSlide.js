@@ -18,30 +18,30 @@ function WeatherSlide(props) {
                 <div className="weather-top">
                     <FontAwesomeIcon icon="cloud" size='8x'  color="white" className="main-icon" />
                     <div className="current-info">
-                        <h2>62</h2>
+                        <h2>{Math.round(props.temperature)}</h2>
                         <p>{props.des}</p>
                     </div>
                     <div className="current-temps">
-                        <p>high: 70</p>
-                        <p>low: 55</p>
+                        <p>high: {Math.round(props.high)}</p>
+                        <p>low: {Math.round(props.low)}</p>
                     </div>
                 </div>
                 <div className="weather-bottom">
                     <div className="day-info">
                         <FontAwesomeIcon icon="sun" size='3x' color="white" className="small-icon" />
-                        <p>6:00am</p>
+                        <p>{props.sunrise}am</p>
                     </div>
                     <div className="day-info">
                         <FontAwesomeIcon icon="moon" size='3x' color="white" className="small-icon" />
-                        <p>10:00pm</p>
+                        <p>{props.sunset}pm</p>
                     </div>
                     <div className="day-info">
                         <FontAwesomeIcon icon="water" size='3x' color="white" className="small-icon" />
-                        <p>70%</p>
+                        <p>{props.humidity}%</p>
                     </div>
                     <div className="day-info">
                         <FontAwesomeIcon icon="wind" size='3x' color="white" className="small-icon" />
-                        <p>3mph</p>
+                        <p>{Math.round(props.wind)}mph</p>
                     </div>
                 </div>
             </div>
