@@ -11,6 +11,10 @@ library.add(
 );
 
 function WeatherSlide(props) {
+    var myDate = new Date(props.sunrise *1000);
+    var sunrise = `${myDate.getHours()}:${myDate.getMinutes()}`;
+    var mySecondDate = new Date(props.sunset *1000);
+    var sunset = `${mySecondDate.getHours()-6}:${mySecondDate.getMinutes()}`;
     return (
         <div>
             <h1 className="title">Todays Weather In Bend</h1>
@@ -29,11 +33,11 @@ function WeatherSlide(props) {
                 <div className="weather-bottom">
                     <div className="day-info">
                         <FontAwesomeIcon icon="sun" size='3x' color="white" className="small-icon" />
-                        <p>{props.sunrise}am</p>
+                        <p>{sunrise}am</p>
                     </div>
                     <div className="day-info">
                         <FontAwesomeIcon icon="moon" size='3x' color="white" className="small-icon" />
-                        <p>{props.sunset}pm</p>
+                        <p>{sunset}pm</p>
                     </div>
                     <div className="day-info">
                         <FontAwesomeIcon icon="water" size='3x' color="white" className="small-icon" />

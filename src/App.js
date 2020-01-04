@@ -45,7 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <WeatherSlide icon={this.state.icon} des={this.state.desc} temperature={this.state.temperature} high={this.state.high} low={this.state.low} humidity={this.state.humidity} wind={this.state.wind} sunrise={this.state.sunrise} sunset={this.state.sunset}/>
+        { <WeatherSlide icon={this.state.icon} des={this.state.desc} temperature={this.state.temperature} high={this.state.high} low={this.state.low} humidity={this.state.humidity} wind={this.state.wind} sunrise={this.state.sunrise} sunset={this.state.sunset}/> }
       </div>
     )
   }
