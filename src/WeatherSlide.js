@@ -13,17 +13,17 @@ library.add(
 function WeatherSlide(props) {
     return (
         <div>
-            <h1 className="title">Todays Weather</h1>
+            <h1 className="title">Todays Weather In Bend</h1>
             <div className="slide">
                 <div className="weather-top">
-                    <FontAwesomeIcon icon="cloud" size='8x'  color="white" className="main-icon" />
+                    <FontAwesomeIcon icon={props.icon} size='8x'  color="white" className="main-icon" />
                     <div className="current-info">
                         <h2>{Math.round(props.temperature)}</h2>
                         <p>{props.des}</p>
                     </div>
                     <div className="current-temps">
-                        <p>high: {Math.round(props.high)}</p>
-                        <p>low: {Math.round(props.low)}</p>
+                        <p>city high: {Math.round(props.high)}</p>
+                        <p>city low: {Math.round(props.low)}</p>
                     </div>
                 </div>
                 <div className="weather-bottom">
