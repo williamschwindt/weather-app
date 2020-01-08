@@ -7,9 +7,9 @@ import WeatherSlide from './WeatherSlide';
 
 function setIcon(des) {
   if (des === 'clear sky') {
-    return 'sun';    
+    return "sun";    
   } else {
-    return 'cloud';
+    return "cloud";
   } 
 }
 
@@ -39,13 +39,21 @@ class App extends React.Component {
       this.setState({ wind: res.data.wind.speed });
       this.setState({ sunrise: res.data.sys.sunrise });
       this.setState({ sunset: res.data.sys.sunset });
-      this.setState({ icon: setIcon(this.desc) })   
+      this.setState({ icon: setIcon(this.desc) });   
     });
   }
   render() {
     return (
       <div className="App">
-        { <WeatherSlide icon={this.state.icon} des={this.state.desc} temperature={this.state.temperature} high={this.state.high} low={this.state.low} humidity={this.state.humidity} wind={this.state.wind} sunrise={this.state.sunrise} sunset={this.state.sunset}/> }
+        <WeatherSlide icon={this.state.icon} 
+        des={this.state.desc} 
+        temperature={this.state.temperature} 
+        high={this.state.high} 
+        low={this.state.low} 
+        humidity={this.state.humidity} 
+        wind={this.state.wind} 
+        sunrise={this.state.sunrise} 
+        sunset={this.state.sunset}/> 
       </div>
     )
   }
