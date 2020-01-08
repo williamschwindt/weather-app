@@ -3,16 +3,6 @@ import axios from 'axios'
 import './App.css';
 import WeatherSlide from './WeatherSlide';
 
-
-
-function setIcon(des) {
-  if (des === 'clear sky') {
-    return "sun";    
-  } else {
-    return "cloud";
-  } 
-}
-
 class App extends React.Component {
   state = {
     desc: [],
@@ -27,6 +17,15 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+
+    function setIcon(des) {
+      if (des === 'clear sky') {
+        return "sun";    
+      } else {
+        return "cloud";
+      } 
+    }
+
     axios.get('http://api.openweathermap.org/data/2.5/weather?q=Bend&units=imperial&cnt=7&APPID=f198ba53eecf7c07984fc80b85bbe872'
     )
     .then((res) => {

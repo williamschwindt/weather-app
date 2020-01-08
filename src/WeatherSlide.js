@@ -26,8 +26,8 @@ function WeatherSlide(props) {
                         <p>{props.des}</p>
                     </div>
                     <div className="current-temps">
-                        <p>city high: {Math.round(props.high)}</p>
-                        <p>city low: {Math.round(props.low)}</p>
+                        <p>high: {Math.round(props.high)}</p>
+                        <p>low: {Math.round(props.low)}</p>
                     </div>
                 </div>
                 <div className="weather-bottom">
