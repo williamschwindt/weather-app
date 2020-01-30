@@ -20,7 +20,7 @@ function WeatherSlide(props) {
             <h1 className="title">Todays Weather In Bend</h1>
             <div className="slide">
                 <div className="weather-top">
-                    <FontAwesomeIcon icon={props.icon} size='8x'  color="white" className="main-icon" />
+                    <img src={props.icon} className="main-icon" alt="weather-icon" />
                     <div className="current-info">
                         <h2>{Math.round(props.temperature)}</h2>
                         <p>{props.des}</p>

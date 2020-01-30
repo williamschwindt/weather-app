@@ -17,19 +17,15 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-
-    function setIcon(des) {
-      if (des === 'clear sky') {
-        return "sun";    
-      } else {
-        return "cloud";
-      } 
-    }
-
     axios.get('http://api.openweathermap.org/data/2.5/weather?q=Bend&units=imperial&cnt=7&APPID=f198ba53eecf7c07984fc80b85bbe872'
     )
     .then((res) => {
       console.log(res);
+
+      let iconCode = res.data.weather[0].icon;
+      let iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+
+      this.setState({ icon: iconUrl })
       this.setState({ desc: res.data.weather[0].description });
       this.setState({ temperature: res.data.main.temp });
       this.setState({ high: res.data.main.temp_max });
@@ -37,8 +33,7 @@ class App extends React.Component {
       this.setState({ humidity: res.data.main.humidity });
       this.setState({ wind: res.data.wind.speed });
       this.setState({ sunrise: res.data.sys.sunrise });
-      this.setState({ sunset: res.data.sys.sunset });
-      this.setState({ icon: setIcon(this.desc) });   
+      this.setState({ sunset: res.data.sys.sunset });   
     });
   }
   render() {
