@@ -16,7 +16,7 @@ function WeatherSlide(props) {
     var mySecondDate = new Date(props.sunset *1000);
     var sunset = `${mySecondDate.getHours()-12}:${mySecondDate.getMinutes()}`;
     return (
-        <div>
+        <div className="weather-slide">
             <h1 className="title">Todays Weather In Bend</h1>
             <div className="slide">
                 <div className="weather-top">

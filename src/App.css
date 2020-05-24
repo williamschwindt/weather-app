@@ -63,6 +63,11 @@ html {
   font-family: 'Montserrat', arial;
 }
 
+.weather-slide {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .title {
   font-size: 4rem;
   margin-bottom: 100px;
@@ -71,7 +76,9 @@ html {
 .slide {
   background: linear-gradient(#6480ff, #3532cb);
   box-shadow: 0px 0px 10px #000;
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .weather-top {
@@ -112,4 +119,97 @@ html {
 .weather-bottom p {
   font-size: 1.5rem;
   margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+      
+  .weather-top h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .weather-top {
+    margin-bottom: 30px;
+  }
+  
+  .main-icon {
+    margin: 20px;
+    width: 80px;
+  }
+  
+  .weather-top h2 {
+    font-size: 2.5rem;
+  }
+  
+  .weather-top p {
+    font-size: 1.8rem;
+  }
+  
+  .current-temps {
+    margin-right: 30px;
+  }
+  
+  .weather-bottom {
+    padding: 20px;
+  }
+    
+  .weather-bottom p {
+    font-size: 1.3rem;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 500px) {  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .weather-top {
+    margin-bottom: 10px;
+  }
+
+  .main-icon {
+    margin: 10px;
+    width: 60px;
+  }
+  
+  .weather-top h2 {
+    font-size: 1.8rem;
+  }
+  
+  .weather-top p {
+    font-size: 1.2rem;
+  }
+  
+  .current-temps {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .weather-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+  }
+  
+  .day-info{
+    margin-bottom: 10px;
+  }
+
+  .day-info svg {
+    font-size: 1.2rem;
+  }
+  
+  .weather-bottom p {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
 }
